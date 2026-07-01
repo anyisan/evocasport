@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaSport</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+    <a href="index.html">
+        <img src="img/logo.png" alt="VocaSport">
+    </a>
+</div>
+
+        <nav class="menu">
+        
+            <a href="index.html">Inicio</a>
+            <a href="deportes.html">Deportes</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="historias.html">Historias</a>
+            <a href="tienda.html">Tienda</a>
+        </nav>
+
+        <button class="btn-registro">
+        <i class="fa-regular fa-circle-user"></i>
+        Registro
+    </button>   
+
+</header>
+
+
+<section class="banner-historias">
+
+    <img src="img/banner-historias.jpg" alt="Historias">
+
+    <div class="overlay-historias">
+
+        <h1>Historias</h1>
+
+        <p>
+            Conoce a las personas que impulsan los deportes
+            alternativos en Colombia y Latinoamérica.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="intro-historias">
+
+    <h2>Historias destacadas</h2>
+
+</section>
+
+
+<section class="catalogo-historias">
+
+    <a class="card-historia"
+onclick="abrirHistoria(
+'Jonathan Camargo',
+'BMX Flatland',
+'Ha representado a Colombia en 34 países y cuenta con varios títulos internacionales como el Campeonato Panamericano de Perú (2025).',
+'https://www.youtube.com/embed/_AAluCZn_0Y'
+)">
+
+    <img src="img/jhonatan.jpg" alt="Jonathan Camargo">
+
+    <h3>Jonathan Camargo</h3>
+
+    <p>BMX Flatland</p>
+
+</a>
+
+<a class="card-historia"
+onclick="abrirHistoria(
+'Jazmín Álvarez',
+'Skateboarding',
+'Primera mujer en Colombia en clasificar a los Juegos Olímpicos 2024 en esta disciplina.',
+'https://www.youtube.com/embed/zp_axRLPIxc'
+)">
+
+    <img src="img/jazminskate.jpg" alt="Jazmín Álvarez">
+
+    <h3>Jazmín Álvarez</h3>
+
+    <p>Skateboarding</p>
+
+</a>
+    
+
+<a class="card-historia"
+onclick="abrirHistoria(
+'Samuel Romero',
+'Floorball',
+'Pionero y principal promotor del deporte en el país. Fundó la Asociación Colombiana de Floorball.',
+'https://www.youtube.com/embed/qgoK2lKh6MM'
+)">
+
+    <img src="img/samuel.jpg" alt="Samuel Romero">
+
+    <h3>Samuel Romero</h3>
+
+    <p>Floorball</p>
+
+</a>
+
+<a class="card-historia"
+onclick="abrirHistoria(
+'Brayan Carreño',
+'Patinaje artístico sobre ruedas',
+'Se coronó campeón de la Final de la Copa del Mundo de Patinaje Artístico en Cesena, Italia.',
+'https://www.youtube.com/embed/TomqDqZQqz0'
+)">
+
+    <img src="img/bryan.jpg" alt="Brayan Carreño">
+
+    <h3>Brayan Carreño</h3>
+
+    <p>Patinaje artístico sobre ruedas</p>
+
+</a>
+
+
+<a class="card-historia"
+onclick="abrirHistoria(
+'Valeria Cárdenas',
+'Ultimate Frisbee',
+'Es una de las mejores jugadoras de Ultimate frisbee en todo el mundo',
+'https://www.youtube.com/embed/VeoIVhGVivg'
+)">
+
+    <img src="img/valeria.jpg" alt="Valeria Cárdenas">
+
+    <h3>Valeria Cárdenas </h3>
+
+    <p>Ultimate Frisbee</p>
+
+</a>
+
+</section>
+
+
+
+
+
+
+
+
+
+<div id="modalHistoria" class="modal-evento">
+
+    <div class="contenido-evento">
+
+        <span class="cerrar-evento"
+        onclick="cerrarHistoria()">
+        &times;
+        </span>
+
+        <h2 id="nombreHistoria"></h2>
+
+        <p id="deporteHistoria"></p>
+
+        <p id="descripcionHistoria"></p>
+
+        <div class="contenedor-video">
+
+    <iframe
+        id="videoHistoria"
+        width="100%"
+        height="400"
+        src=""
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+    </div>
+
+</div>
+
+
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-columna">
+
+            <p>Contáctate con nosotros</p>
+            <p>Política de privacidad</p>
+            <p>Términos de uso</p>
+            <p>Evoca Tienda</p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <p>Ajuste de cookies</p>
+
+            <p>Redes sociales</p>
+
+        <div class="social-icons">
+
+    <a href="https://facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+    <a href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+</div>
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+        © 2026 EvocaSport. Todos los derechos reservados.
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

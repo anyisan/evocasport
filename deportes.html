@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaSport</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<>
+
+    <header class="navbar">
+
+        <div class="logo">
+    <a href="index.html">
+        <img src="img/logo.png" alt="VocaSport">
+    </a>
+</div>
+
+        <nav class="menu">
+        
+            <a href="index.html">Inicio</a>
+            <a href="deportes.html">Deportes</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="historias.html">Historias</a>
+            <a href="tienda.html">Tienda</a>
+        </nav>
+
+        <button class="btn-registro">
+    <i class="fa-regular fa-circle-user"></i>
+    Registro
+</button>
+
+</header>
+
+<section class="banner-deportes">
+
+    <img src="img/banner-deportes.jpg" alt="Deportes">
+
+    <div class="overlay-deportes">
+
+        <h1>Deportes</h1>
+
+        <p>
+            Explora una gran cantidad de
+            deportes y encuentra el ideal para ti.
+        </p>
+
+    </div>
+
+</section>
+
+<div id="modalDeporte" class="modal">
+
+    <div class="modal-contenido">
+
+        <span class="cerrar" onclick="cerrarModal()">
+            &times;
+        </span>
+
+        <h2 id="tituloModal"></h2>
+
+        <img id="imagenModal" src="" alt="">
+
+        <p id="textoModal"></p>
+
+    </div>
+
+</div>
+
+
+
+<section class="catalogo-deportes">
+
+    <a class="card-deporte"
+onclick="abrirModal(
+'Bossaball',
+'img/deportes.1.jpg',
+'El Bossaball es un deporte moderno y muy llamativo que mezcla voleibol, fútbol, gimnasia y música en un solo juego. Se practica sobre una cancha inflable con trampolines, lo que permite a los jugadores saltar muy alto y realizar acrobacias mientras golpean el balón. El bossaball llegó a Colombia aproximadamente en 2014 como una alternativa deportiva innovadora. En el Festival de Verano de Bogotá 2022 fue una de las atracciones principales.'
+)">
+    <img src="img/deportes.1.jpg" alt="Bossaball">
+    <h3>Bossaball</h3>
+</a>
+
+    <a class="card-deporte"
+onclick="abrirModal(
+'Slackline',
+'img/deportes.2.jpg',
+'El slackline es un deporte de equilibrio que consiste en caminar o realizar acrobacias sobre una cinta plana tensada entre dos puntos. Ha crecido en Colombia como un deporte alternativo urbano. Se practica en parques y espacios públicos de ciudades como Bogotá y Medellín. También se utiliza para el desarrollo personal, el trabajo en equipo y el bienestar físico y mental.'
+)">
+    <img src="img/deportes.2.jpg" alt="Slackline">
+    <h3>Slackline</h3>
+</a>
+
+    <a class="card-deporte"
+onclick="abrirModal(
+'BMX Flatland',
+'img/deportes.3.jpg',
+'El BMX Flatland es una modalidad del BMX freestyle que consiste en realizar trucos y acrobacias sobre una superficie plana, sin rampas ni saltos. Es considerado casi como un arte sobre bicicleta, ya que combina equilibrio, creatividad y estilo. Se practica en calles, parques y espacios abiertos donde los riders ejecutan giros, equilibrios y movimientos complejos utilizando las ruedas, el manubrio y los pegs. Esta disciplina suele compararse con una mezcla entre ciclismo, breakdance y gimnasia artística. En Colombia, el BMX Flatland ha crecido gradualmente aunque sigue siendo menos conocido que el BMX de carreras. Llegó aproximadamente en la década de los años 90, impulsado por espacios como la ciclovía de Bogotá. Actualmente se practica principalmente en Bogotá, Cundinamarca y Medellín. Gracias a que puede realizarse en calles y parques, es considerado un deporte urbano, accesible y una excelente forma de expresión sobre dos ruedas.'
+)">
+    <img src="img/deportes.3.jpg" alt="BMX Flatland">
+    <h3>BMX Flatland</h3>
+</a>
+
+<script src="script.js"></script>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Roller Derby',
+'img/deportes.4.jpeg',
+'El Roller Derby es un deporte de contacto que se practica sobre patines de cuatro ruedas en una pista ovalada. Dos equipos compiten simultáneamente y cada uno cuenta con una jammer, encargada de anotar puntos, y cuatro blockers, que defienden y bloquean a las rivales. Este deporte combina velocidad, estrategia, trabajo en equipo y rapidez mental, además de permitir bloqueos bajo reglas específicas para garantizar la seguridad de las jugadoras.El Roller Derby llegó a Colombia alrededor de 2010 y desde entonces ha crecido como un deporte alternativo con una comunidad muy activa. Se practica principalmente en Bogotá, Medellín y Cali. Equipos como Bogotá Bone Breakers, Rock N Roller Queens y Medellín Roller Derby han contribuido al desarrollo y consolidación de esta disciplina en el país.'
+)">
+    <img src="img/deportes.4.jpeg" alt="Roller Derby">
+    <h3>Roller Derby</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Skateboarding',
+'img/deportes.5.jpeg',
+'El skateboarding es un deporte urbano y un estilo de vida que combina equilibrio, creatividad y expresión personal, practicado en calles, parques y skateparks. Su objetivo no es solo desplazarse, sino realizar trucos como el *ollie*, *kickflip* y *grind*. Existen varias modalidades: *street* (trucos en escaleras y barandas), *park* (rampas en skateparks), *vert* (half-pipe) y *freestyle* (trucos técnicos en plano). En Colombia ha crecido notablemente, siendo muy popular en Bogotá, Medellín y Cali, además de municipios pequeños. Destacan figuras como Jhancarlos González, referente internacional, y Evelyn Inga, representante femenina en ascenso. El país participa en competencias nacionales e internacionales, y el deporte ha recibido mayor apoyo desde su inclusión en los Juegos Olímpicos, impulsado también por la construcción de más skateparks públicos.'
+)">
+    <img src="img/deportes.5.jpeg" alt="Nombre del deporte">
+    <h3>Skateboarding</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Softball',
+'img/deportes.6.jpeg',
+'El softball es un deporte de equipo parecido al béisbol, pero con reglas propias que lo hacen más dinámico y accesible. Se juega en un campo en forma de diamante, con 9 o 10 jugadores por equipo, y el objetivo es anotar más carreras que el rival en 7 entradas. Existen dos modalidades principales: *fastpitch*, con lanzamientos rápidos y carácter competitivo (profesional y olímpico), y *slowpitch*, con lanzamientos más suaves y enfoque recreativo. En Colombia el softball tiene gran importancia, sobre todo en la región Caribe, con tradición fuerte en ciudades como Barranquilla, Cartagena y Sincelejo. La selección nacional, especialmente en la categoría femenina, ha logrado buenos resultados en torneos internacionales y posiciones destacadas en América Latina. Colombia ha sido campeón suramericano en varias ocasiones y ha competido en eventos como los Juegos Panamericanos, consolidando al softball femenino como uno de los deportes donde más se destaca el país a nivel internacional.historia...'
+)">
+    <img src="img/deportes.6.jpeg" alt="Nombre del deporte">
+    <h3>Softball</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Patinaje artistico',
+'img/deportes.7.jpeg',
+'El patinaje artístico sobre ruedas es una disciplina que mezcla deporte, arte y expresión corporal, donde los patinadores realizan coreografías con música sobre patines, incluyendo saltos, giros y figuras. Se practica en pistas lisas o coliseos y puede ser individual, en pareja o en grupo, evaluando técnica, dificultad, expresión artística y sincronización con la música. Es similar al patinaje sobre hielo, pero con ruedas. Sus categorías principales son: individual (saltos y giros con énfasis en técnica y expresión), parejas (movimientos sincronizados con levantamientos), danza (coreografías centradas en ritmo y estilo) y grupos o show (presentaciones colectivas sincronizadas). En Colombia esta disciplina ha crecido, aunque es menos conocida que el patinaje de velocidad. Entre sus exponentes destacan Brayan Carreño, campeón mundial, y Andrea Silva, referente nacional. El país ha obtenido medallas en Campeonatos Mundiales y se ha consolidado como uno de los más fuertes de América Latina en esta modalidad.'
+)">
+    <img src="img/deportes.7.jpeg" alt="Nombre del deporte">
+    <h3>Patinaje artistico</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Bike polo',
+'img/deportes.8.jpeg',
+'El Bike Polo es un deporte urbano que combina ciclismo y polo tradicional. Se juega en bicicletas, con equipos de tres jugadores que usan un mazo para golpear una pelota y marcar goles en la portería rival. Es rápido y requiere equilibrio, coordinación y estrategia, con reglas como no tocar el suelo con los pies y anotar solo con la parte del mazo. En Colombia ha crecido como deporte alternativo, especialmente entre jóvenes en ciudades como Bogotá, Medellín y Cali, donde existen grupos organizados, torneos locales y participación en competencias latinoamericanas. Aunque aún es emergente, su comunidad sigue expandiéndose dentro de la cultura urbana y ciclista.'
+)">
+    <img src="img/deportes.8.jpeg" alt="Nombre del deporte">
+    <h3>Bike polo</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Roundnet',
+'img/deportes.9.jpeg',
+'El roundnet en Colombia es un deporte emergente que ha crecido rápidamente desde su llegada en 2018, consolidándose con la creación de *Roundnet Colombia*, organización reconocida por la Federación Internacional de Roundnet y por Spikeball Inc. como embajadora oficial. Actualmente cuenta con clubes en ciudades como Bogotá, Medellín, Cartagena y Barranquilla, donde se realizan entrenamientos, torneos locales y encuentros interciudades. Se juega en parques, playas y coliseos, lo que lo hace accesible y dinámico, atrayendo a jóvenes y adultos por su carácter recreativo y competitivo. Además, equipos colombianos han participado en torneos latinoamericanos, posicionando al país como parte activa de la comunidad internacional de roundnet, que sigue creciendo y consolidándose dentro de la cultura urbana y deportiva nacional.'
+)">
+    <img src="img/deportes.9.jpeg" alt="Nombre del deporte">
+    <h3>Roundnet</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Dodgeball',
+'img/deportes.10.png',
+'El dodgeball en Colombia se ha convertido en un deporte en crecimiento que combina agilidad, estrategia y trabajo en equipo. Se practica principalmente en gimnasios y espacios deportivos urbanos, donde equipos mixtos compiten lanzando pelotas para eliminar a sus oponentes. En los últimos años ha ganado popularidad gracias a su dinamismo y accesibilidad, atrayendo a jóvenes y adultos en ciudades como Bogotá, Medellín y Cali. Además, se han formado ligas y torneos locales que fortalecen la comunidad deportiva y promueven el espíritu competitivo y recreativo del dodgeball como una disciplina moderna dentro del panorama deportivo colombiano.'
+)">
+    <img src="img/deportes.10.png" alt="Nombre del deporte">
+    <h3>Dodgeball</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Floorball',
+'img/deportes.11.png',
+'El floorball en Colombia es un deporte en expansión que combina velocidad, técnica y trabajo en equipo, practicado en canchas cerradas con bastones ligeros y una pelota plástica perforada. Aunque es relativamente nuevo en el país, ha despertado interés en ciudades como Bogotá y Medellín, donde se han formado clubes y se organizan torneos locales. Su dinámica rápida y accesible lo convierte en una disciplina atractiva para jóvenes y adultos, y poco a poco se está consolidando como parte de la oferta deportiva alternativa en el panorama urbano colombiano.'
+)">
+    <img src="img/deportes.11.png" alt="Nombre del deporte">
+    <h3>Floorball</h3>
+</a>
+
+<a class="card-deporte"
+onclick="abrirModal(
+'Ultimate-frisbee',
+'img/deportes.12.jpeg',
+'El ultimate frisbee en Colombia es un deporte que ha ganado gran popularidad en los últimos años, especialmente entre jóvenes universitarios y comunidades deportivas urbanas. Se juega en campos abiertos, donde dos equipos buscan avanzar y anotar puntos atrapando el disco dentro de la zona de gol rival, combinando velocidad, resistencia y trabajo en equipo. Su carácter inclusivo y dinámico lo ha convertido en una disciplina atractiva en ciudades como Bogotá, Medellín y Cali, donde existen ligas y torneos locales. Además, Colombia ha tenido participación en competencias internacionales, consolidando al ultimate frisbee como un deporte alternativo en crecimiento dentro del panorama nacional.'
+)">
+    <img src="img/deportes.12.jpeg" alt="Nombre del deporte">
+    <h3>Ultimate-frisbee</h3>
+</a>
+
+</section>
+
+<section class="sugerencia-deporte">
+
+    <h2>¿No encuentras tu deporte?</h2>
+
+    <p>
+        Ayúdanos a seguir creciendo.
+        Cuéntanos qué deporte te gustaría ver en EvocaSport
+        y podremos incluirlo en futuras actualizaciones.
+    </p>
+
+    <form class="formulario-deporte">
+
+        <input
+            type="text"
+            placeholder="Nombre completo"
+            required
+        >
+
+        <input
+            type="email"
+            placeholder="Correo electrónico"
+            required
+        >
+
+        <input
+            type="text"
+            placeholder="Nombre del deporte"
+            required
+        >
+
+        <textarea
+            placeholder="Cuéntanos sobre este deporte..."
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Enviar sugerencia
+        </button>
+
+    </form>
+
+</section>
+
+ <footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-columna">
+
+            <p>Contáctate con nosotros</p>
+            <p>Política de privacidad</p>
+            <p>Términos de uso</p>
+            <p>Evoca Tienda</p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <p>Ajuste de cookies</p>
+
+            <p>Redes sociales</p>
+
+        <div class="social-icons">
+
+    <a href="https://facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+     <a href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+</div>
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+        © 2026 EvocaSport. Todos los derechos reservados.
+    </div>
+
+</footer>
+
+</body>
+</html>

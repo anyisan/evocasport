@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaSport</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+    <a href="index.html">
+        <img src="img/logo.png" alt="VocaSport">
+    </a>
+</div>
+
+        <nav class="menu">
+        
+            <a href="index.html">Inicio</a>
+            <a href="deportes.html">Deportes</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="historias.html">Historias</a>
+            <a href="tienda.html">Tienda</a>
+        </nav>
+
+        <button class="btn-registro">
+        <i class="fa-regular fa-circle-user"></i>
+        Registro
+    </button>   
+
+</header>
+
+
+
+<section class="banner-eventos">
+
+    <img src="img/banner-eventos.jpeg" alt="Eventos">
+
+    <div class="overlay-eventos">
+
+        <h1>Eventos</h1>
+
+        <p>
+            Descubre y participa en eventos deportivos
+            alrededor del país.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="catalogo-eventos">
+
+<a class="card-evento"
+onclick="abrirEvento(
+'Torneo Tropical Altitude',
+'img/evento-tropical.jpeg',
+'Bogotá, Colombia',
+'15 y 16 de noviembre de 2026',
+'Torneo de ligas colombianas y equipos internacionales invitados.',
+)">
+
+    <img src="img/evento-roller.jpeg" alt="Evento">
+
+    <h3>Torneo Roller Derby</h3>
+
+</a>
+
+<a class="card-evento"
+onclick="abrirEvento(
+'Campeonato Mundial Masters de Clubes de Ultimate',
+'img/evento-Ultimate.jpeg',
+'Villamaria, caldas, Colombia',
+'13 al 16 de noviembre 2026',
+'Las mejores leyendas del Ultimate Frisbee se reúnen en Caldas para competir en un campeonato internacional que celebra la experiencia, la estrategia y el espíritu de juego que caracteriza este deporte.'
+)">
+
+    <img src="img/evento-ultimatefrisbee.jpeg" alt="Ultimate Frisbee">
+
+    <h3>Campeonato Mundial Masters de Clubes de Ultimate Frisbee</h3>
+
+</a>
+
+<a class="card-evento"
+onclick="abrirEvento(
+'III Válida de la Copa Nacional de BMX Freestyle',
+'img/evento-bmx.jpeg',
+'Bogotá, Colombia',
+'28 al 30 de agosto 2026',
+'Los mejores riders del país se reúnen para demostrar su talento, técnica y creatividad en la III Válida de la Copa Nacional de BMX Freestyle.'
+)">
+
+    <img src="img/evento-bmxflatland.png" alt="BMX Flatland">
+
+    <h3>III Válida de la Copa Nacional de BMX Freestyle</h3>
+
+</a>
+
+<a class="card-evento"
+onclick="abrirEvento(
+'Torneo Latinoamericano de Bicipolo 2026',
+'img/evento-bicipolo.jpeg',
+'Lima, Perú',
+'10 al 16 de noviembre de 2026',
+'El Roundnet colombiano tiene una cita imperdible: talento, estrategia y emoción en un solo escenario.'
+)">
+
+    <img src="img/evento-bikepolo.jpeg" alt="Bici Polo">
+
+    <h3>Torneo Latinoamericano de Bicipolo 2026</h3>
+
+</a>
+
+<a class="card-evento"
+onclick="abrirEvento(
+'Torneo nacional Roundnet Colombia 2026',
+'img/evento-roundnet.jpg',
+'Bogotá - Colombia',
+'16 al 17 de noviembre de 2026',
+'Los mejores equipos de Latinoamérica se reúnen para demostrar habilidad, estrategia y corazón.'
+)">
+
+    <img src="img/evento-roundnetfoto.jpg" alt="Roundnet">
+
+    <h3>Torneo Nacional Roundnet Colombia 2026</h3>
+
+</a>
+
+
+<a class="card-evento"
+onclick="abrirEvento(
+'Festival Distrito 2026',
+'img/evento-festival.png',
+'Bogotá - Colombia',
+'22 y 23 de noviembre de 2026',
+'El festival que mueve la cultura extrema de la ciudad.'
+)">
+
+    <img src="img/evento-festival.png" alt="Festival distrito">
+
+    <h3>Festival Distrito 2026</h3>
+
+</a>
+
+
+</section>
+
+
+<div id="modalEvento" class="modal-evento">
+
+    <div class="contenido-evento">
+
+        <span class="cerrar-evento" onclick="cerrarEvento()">
+            &times;
+        </span>
+
+        <h2 id="tituloEvento"></h2>
+
+        <img id="imagenEvento" src="" alt="">
+
+        <div class="datos-evento">
+
+            <p id="ciudadEvento"></p>
+
+            <p id="fechaEvento"></p>
+
+        </div>
+
+        <p id="descripcionEvento"></p>
+
+        <h3>Cronograma del evento</h3>
+
+        <div id="cronogramaEvento"></div>
+
+
+        <h3>📍 Ubicación del evento</h3>
+
+<a
+    id="linkMapa"
+    class="btn-mapa"
+    target="_blank">
+    Ver ubicación en Google Maps
+</a>
+
+        <button class="btn-inscripcion">
+            Inscribirme al evento
+        </button>
+
+    </div>
+
+</div>
+
+<section class="formulario-eventos">
+
+    <div class="contenedor-formulario-eventos">
+
+        <h2>¿Conoces un evento deportivo?</h2>
+
+        <p>
+            Ayúdanos a descubrir nuevos torneos, festivales y competencias
+            deportivas para seguir fortaleciendo la comunidad.
+        </p>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Nombre del evento"
+                required>
+
+            <input
+                type="text"
+                placeholder="Ciudad"
+                required>
+
+            <input
+                type="text"
+                placeholder="Disciplina deportiva"
+                required>
+
+            <input
+                type="date"
+                required>
+
+           <textarea placeholder="Cuéntanos sobre el evento..." rows="5" required></textarea>
+
+            <button type="submit">
+                Postular evento
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+ <footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-columna">
+
+            <p>Contáctate con nosotros</p>
+            <p>Política de privacidad</p>
+            <p>Términos de uso</p>
+            <p>Evoca Tienda</p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <p>Ajuste de cookies</p>
+
+            <p>Redes sociales</p>
+
+        <div class="social-icons">
+
+    <a href="https://facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+     <a href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+</div>
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+        © 2026 EvocaSport. Todos los derechos reservados.
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
