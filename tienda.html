@@ -6,6 +6,8 @@
     <title>VocaSport</title>
     <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="tienda.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
@@ -21,23 +23,89 @@
 </div>
 
         <nav class="menu">
-        
-            <a href="index.html">Inicio</a>
-            <a href="deportes.html">Deportes</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="historias.html">Historias</a>
-            <a href="tienda.html">Tienda</a>
-        </nav>
 
-        <button class="btn-registro">
+    <a href="index.html">Inicio</a>
+    <a href="deportes.html">Deportes</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="historias.html">Historias</a>
+    <a href="tienda.html">Tienda</a>
+
+</nav>
+
+<div class="acciones-header">
+
+    <button class="btn-registro">
+
         <i class="fa-regular fa-circle-user"></i>
+
         Registro
-    </button>   
+
+    </button>
+
+    <button class="btn-carrito" onclick="abrirCarrito()">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span id="contadorCarrito">0</span>
+
+    </button>
+
+</div>
 
 </header>
 
 
 
+<section class="busqueda-tienda">
+
+    <input
+        type="text"
+        id="buscarProducto"
+        placeholder="🔍 Buscar productos..."
+        autocomplete="off">
+
+</section>
+
+<section class="categorias-tienda">
+
+    <button class="activo" data-categoria="Todos">
+        Todos
+    </button>
+
+    <button data-categoria="Mujer">
+        Mujer
+    </button>
+
+    <button data-categoria="Hombre">
+        Hombre
+    </button>
+
+    <button data-categoria="Roller Derby">
+        Roller Derby
+    </button>
+
+    <button data-categoria="Ultimate Frisbee">
+        Ultimate Frisbee
+    </button>
+
+    <button data-categoria="BMX Flatland">
+        BMX Flatland
+    </button>
+
+    <button data-categoria="Bike Polo">
+        Bike Polo
+    </button>
+
+    <button data-categoria="Roundnet">
+        Roundnet
+    </button>
+
+</section>
+
+<section id="catalogoProductos"
+class="catalogo-productos">
+
+</section>
 
 
 
@@ -47,13 +115,137 @@
 
 
 
+<div id="modalProducto" class="modal-producto">
 
+    <div class="contenido-producto">
 
+        <span class="cerrar-producto" onclick="cerrarProducto()">
+            &times;
+        </span>
 
+        <div class="producto-grid">
 
+            <div class="producto-imagen">
 
+                <img
+                id="imagenProducto"
+                src=""
+                alt="Producto">
 
+            </div>
 
+            <div class="producto-info">
+
+                <h2 id="nombreProducto"></h2>
+
+                <p id="marcaProducto" class="marca-modal"></p>
+
+                <h3 id="precioProducto"></h3>
+
+                <p id="descripcionProducto"></p>
+
+                <div class="opciones-producto">
+
+                    <div>
+
+                        <label>Talla</label>
+
+                        <select id="tallaProducto">
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label>Cantidad</label>
+
+                        <input
+                        type="number"
+                        id="cantidadProducto"
+                        value="1"
+                        min="1">
+
+                    </div>
+
+                </div>
+
+                <button
+                class="btn-comprar"
+                onclick="agregarCarrito()">
+
+                    🛒 Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="carrito" class="carrito">
+
+    <div class="carrito-header">
+
+        <h2>
+
+            🛒 Mi carrito
+
+        </h2>
+
+        <span onclick="cerrarCarrito()">
+
+            ✕
+
+        </span>
+
+    </div>
+
+    <div
+    id="listaCarrito"
+    class="lista-carrito">
+
+    </div>
+
+    <div class="total-carrito">
+
+        <h3>
+
+            Total:
+
+            <span id="totalCarrito">
+
+                $0
+
+            </span>
+
+        </h3>
+
+        <button
+class="btn-finalizar"
+onclick="irCheckout()">
+
+    Finalizar compra
+
+</button>
+
+    </div>
+
+</div>
+
+<div id="notificacion" class="notificacion">
+
+    ✔ Producto agregado al carrito
+
+</div>
 
 <footer class="footer">
 
@@ -103,9 +295,11 @@
 
 </footer>
 
-<script src="script.js"></script>
+<script src="tienda.js"></script>
 
+
+<script src="checkout.js"></script>
 
 </body>
-</html>
 
+</html>
