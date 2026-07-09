@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | EvocaSport</title>
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- CSS LOGIN -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img src="img/logo.png" alt="EvocaSport">
+
+        </a>
+
+    </div>
+
+    <nav class="menu">
+
+        <a href="index.html">Inicio</a>
+        <a href="deportes.html">Deportes</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="historias.html">Historias</a>
+        <a href="tienda.html">Tienda</a>
+
+    </nav>
+
+    <a href="registro.html" class="btn-registro">
+
+        <i class="fa-regular fa-circle-user"></i>
+
+        Registro
+
+    </a>
+
+</header>
+
+
+<section class="contenedor-login">
+
+    <div class="card-login">
+
+        <img src="img/logo.png"
+        alt="EvocaSport"
+        class="logo-login">
+
+        <h1>
+
+            Bienvenido
+
+        </h1>
+
+        <p>
+
+            Inicia sesión para acceder a tu cuenta.
+
+        </p>
+
+        <form id="formLogin">
+
+            <div class="campo">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                id="correo"
+                placeholder="Correo electrónico"
+                required>
+
+            </div>
+
+            <div class="campo">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                required>
+
+                <i
+                id="mostrarPassword"
+                class="fa-solid fa-eye ojo"></i>
+
+            </div>
+
+            <div class="opciones-login">
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Recordarme
+
+                </label>
+
+                <a href="recuperar.html">
+
+                    ¿Olvidaste tu contraseña?
+
+                </a>
+
+            </div>
+
+            <button type="submit">
+
+                Iniciar sesión
+
+            </button>
+
+        </form>
+
+        <div class="registro-link">
+
+            ¿No tienes una cuenta?
+
+            <a href="registro.html">
+
+                Regístrate
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-columna">
+
+            <p>Contáctate con nosotros</p>
+            <p>Política de privacidad</p>
+            <p>Términos de uso</p>
+            <p>Evoca Tienda</p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <p>Ajuste de cookies</p>
+
+            <p>Redes sociales</p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        © 2026 EvocaSport. Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+<script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+/*=========================================
+            LOGIN
+=========================================*/
+
+body{
+
+    background:linear-gradient(135deg,#f5f7fa,#e8eef9);
+
+}
+
+/* CONTENEDOR */
+
+.contenedor-login{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+/* TARJETA */
+
+.card-login{
+
+    width:100%;
+    max-width:460px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    animation:aparecer .6s ease;
+
+}
+
+/* LOGO */
+
+.logo-login{
+
+    width:110px;
+
+    margin:0 auto 20px;
+
+}
+
+/* TITULOS */
+
+.card-login h1{
+
+    color:#1A237E;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:34px;
+
+}
+
+.card-login p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+
+}
+
+/* CAMPOS */
+
+.campo{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.campo i:first-child{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#1A237E;
+
+}
+
+.campo input{
+
+    width:100%;
+
+    padding:15px 50px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.campo input:focus{
+
+    outline:none;
+
+    border-color:#64DD17;
+
+    box-shadow:0 0 10px rgba(100,221,23,.25);
+
+}
+
+/* OJO */
+
+.ojo{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#888;
+
+    transition:.3s;
+
+}
+
+.ojo:hover{
+
+    color:#1A237E;
+
+}
+
+/* OPCIONES */
+
+.opciones-login{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    font-size:14px;
+
+}
+
+.opciones-login label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#555;
+
+}
+
+.opciones-login a{
+
+    text-decoration:none;
+
+    color:#1A237E;
+
+    font-weight:600;
+
+}
+
+.opciones-login a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* BOTON */
+
+.card-login button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#64DD17;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card-login button:hover{
+
+    background:#53c813;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(100,221,23,.35);
+
+}
+
+/* LINK */
+
+.registro-link{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#666;
+
+}
+
+.registro-link a{
+
+    color:#1A237E;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.registro-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ANIMACION */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .card-login{
+
+        padding:30px 25px;
+
+    }
+
+    .card-login h1{
+
+        font-size:28px;
+
+    }
+
+    .opciones-login{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:flex-start;
+
+    }
+
+}

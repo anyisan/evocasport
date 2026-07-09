@@ -43,20 +43,35 @@ body{
 }
 
 .btn-registro{
+
     background:#64DD17;
     color:white;
+
     display:flex;
     align-items:center;
+    justify-content:center;
     gap:8px;
-    border:none;
-    border-radius:20px;
-    padding:8px 18px;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
     cursor:pointer;
+
     transition:.3s;
+
 }
 
 .btn-registro:hover{
-    background:#59c615;
+
+    background:#53c813;
+
+    transform:translateY(-2px);
+
 }
 
 .btn-registro i{

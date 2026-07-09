@@ -19,7 +19,7 @@ if(slider && btnDerecha && btnIzquierda){
         }
 
         slider.style.transform =
-        `translateX(-${posicion*25}%)`;
+`translateX(-${posicion*100}%)`;
 
     });
 

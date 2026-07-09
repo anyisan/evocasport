@@ -1,0 +1,284 @@
+/*=========================================
+        FONDO
+=========================================*/
+
+body{
+
+    background:linear-gradient(rgba(10,25,90,.75),rgba(10,25,90,.75)),
+    url("img/banner2.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+/*=========================================
+        CONTENEDOR
+=========================================*/
+
+.contenedor-registro{
+
+    width:100%;
+
+    min-height:85vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+/*=========================================
+        TARJETA
+=========================================*/
+
+.card-registro{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:aparecer .7s ease;
+
+}
+
+/*=========================================
+        ANIMACIÓN
+=========================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        LOGO
+=========================================*/
+
+.logo-registro{
+
+    width:120px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+/*=========================================
+        TITULOS
+=========================================*/
+
+.card-registro h1{
+
+    text-align:center;
+
+    color:#1A237E;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.card-registro p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================
+        CAMPOS
+=========================================*/
+
+.campo{
+
+    position:relative;
+
+    margin-bottom:20px;
+
+}
+
+.campo i{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#1A237E;
+
+    font-size:18px;
+
+}
+
+.campo input{
+
+    width:100%;
+
+    padding:16px 18px 16px 52px;
+
+    border:1px solid #CCC;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.campo input:focus{
+
+    outline:none;
+
+    border-color:#64DD17;
+
+    box-shadow:0 0 10px rgba(100,221,23,.3);
+
+}
+
+/*=========================================
+        CHECK
+=========================================*/
+
+.check{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:25px 0;
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+/*=========================================
+        BOTÓN
+=========================================*/
+
+.card-registro button{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#64DD17;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card-registro button:hover{
+
+    background:#57C412;
+
+    transform:translateY(-3px);
+
+}
+
+/*=========================================
+        LINK LOGIN
+=========================================*/
+
+.login-link{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+.login-link a{
+
+    color:#1A237E;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+}
+
+.login-link a:hover{
+
+    color:#64DD17;
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+    .card-registro{
+
+        padding:35px 25px;
+
+    }
+
+    .card-registro h1{
+
+        font-size:28px;
+
+    }
+
+}
