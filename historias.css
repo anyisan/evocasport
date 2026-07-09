@@ -567,3 +567,26 @@
     }
 
 }
+
+
+.cerrar{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    color:#1A237E;
+
+    font-weight:bold;
+}
+
+.cerrar:hover{
+
+    color:#64DD17;
+}
